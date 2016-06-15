@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router-deprecated';
-import { DashboardComponent }  from './dashboard.component';
-import { HeroesComponent }     from './heroes.component';
-import { HeroDetailComponent } from './hero-detail.component';
-import { HeroService }         from './hero.service';
+import { DashboardComponent }  from './links/dashboard.component';
+import { HeroesComponent }     from './links/heroes.component';
+import { HeroDetailComponent } from './links/hero-detail.component';
+import { HeroService }         from './links/hero.service';
 @Component({
   selector: 'my-app',
   template: `
@@ -22,9 +22,9 @@ import { HeroService }         from './hero.service';
   ]
 })
 @RouteConfig([
-  { path: '/dashboard',  name: 'Dashboard',  component: DashboardComponent, useAsDefault: true },
-  { path: '/detail/:id', name: 'HeroDetail', component: HeroDetailComponent },
-  { path: '/heroes',     name: 'Heroes',     component: HeroesComponent }
+  { path: '/links/dashboard',  name: 'Dashboard',  component: DashboardComponent, useAsDefault: true },
+  { path: '/links/detail/:id', name: 'HeroDetail', component: HeroDetailComponent },
+  { path: '/links/heroes',     name: 'Heroes',     component: HeroesComponent }
 ])
 export class AppComponent {
   title = 'Tour of Heroes';

@@ -6,7 +6,7 @@ import { Router } from '@angular/router-deprecated';
 
 @Component({
   selector: 'my-dashboard',
-  templateUrl: 'app/dashboard.component.html',
+  templateUrl: 'app/links/dashboard.component.html',
 })
 export class DashboardComponent implements OnInit {
   heroes: Hero[] = [];
