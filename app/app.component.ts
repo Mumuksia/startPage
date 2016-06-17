@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router-deprecated';
 import { DashboardComponent }  from './links/dashboard.component';
-import { HeroesComponent }     from './links/heroes.component';
-import { HeroDetailComponent } from './links/hero-detail.component';
-import { HeroService }         from './links/hero.service';
+import { BookmarksComponent }     from './links/bookmarks.component';
+import { BookmarkDetailComponent } from './links/bookmark-detail.component';
+import { BookmarkService }         from './links/bookmark.service';
 import { TreIRodComponent }     from './treirod.component';
 import { CompilerComponent }     from './compiler.component';
 @Component({
@@ -12,7 +12,7 @@ import { CompilerComponent }     from './compiler.component';
     <h1>{{title}}</h1>
     <nav>
       <a [routerLink]="['Dashboard']">Dashboard</a>
-      <a [routerLink]="['Heroes']">Heroes</a>
+      <a [routerLink]="['Bookmarks']">Bookmarks</a>
       <a [routerLink]="['TreIRod']">Tre i Rod</a>
       <a [routerLink]="['Compiler']">Java Compiler</a>
     </nav>
@@ -22,16 +22,16 @@ import { CompilerComponent }     from './compiler.component';
   directives: [ROUTER_DIRECTIVES],
   providers: [
     ROUTER_PROVIDERS,
-    HeroService,
+    BookmarkService,
   ]
 })
 @RouteConfig([
   { path: '/treirod',     name: 'TreIRod',     component: TreIRodComponent },
   { path: '/compiler',     name: 'Compiler',     component: CompilerComponent },
   { path: '/links/dashboard',  name: 'Dashboard',  component: DashboardComponent, useAsDefault: true },
-  { path: '/links/detail/:id', name: 'HeroDetail', component: HeroDetailComponent },
-  { path: '/links/heroes',     name: 'Heroes',     component: HeroesComponent }
+  { path: '/links/detail/:id', name: 'BookmarkDetail', component: BookmarkDetailComponent },
+  { path: '/links/bookmarks',     name: 'Bookmarks',     component: BookmarksComponent }
 ])
 export class AppComponent {
-  title = 'Tour of Heroes';
+  title = 'Tour of Bookmarks';
 }

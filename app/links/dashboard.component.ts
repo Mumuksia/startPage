@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Hero } from './hero';
-import { HeroService } from './hero.service';
+import { Bookmark } from './bookmark';
+import { BookmarkService } from './bookmark.service';
 import { Router } from '@angular/router-deprecated';
 
 @Component({
@@ -9,17 +9,17 @@ import { Router } from '@angular/router-deprecated';
   templateUrl: 'app/links/dashboard.component.html',
 })
 export class DashboardComponent implements OnInit {
-  heroes: Hero[] = [];
+  bookmarks: Bookmark[] = [];
   constructor(
   private router: Router,
-  private heroService: HeroService) {
+  private bookmarkService: BookmarkService) {
 }
   ngOnInit() {
-    this.heroService.getHeroes()
-      .then(heroes => this.heroes = heroes.slice(1,5));
+    this.bookmarkService.getBookmarks()
+      .then(bookmarks => this.bookmarks = bookmarks.slice(1,5));
   }
-  gotoDetail(hero: Hero) {
-  let link = ['HeroDetail', { id: hero.id }];
+  gotoDetail(bookmark: Bookmark) {
+  let link = ['BookmarkDetail', { id: bookmark.id }];
   this.router.navigate(link);
 }
 }

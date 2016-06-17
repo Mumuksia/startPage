@@ -1,0 +1,19 @@
+<h2>My bookmarks</h2>
+<ul class="bookmarks">
+  <li *ngFor="let bookmark of bookmarks" (click)="onSelect(bookmark)" [class.selected]="bookmark === selectedBookmark">
+    <span class="bookmark-element">
+      <span class="badge">{{bookmark.id}}</span> {{bookmark.link}}
+    </span>
+    <button class="delete-button" (click)="delete(bookmark, $event)">Delete</button>
+  </li>
+</ul>
+<button (click)="addBookmark()">Add New Bookmark</button>
+<div *ngIf="addingBookmark">
+  <my-bookmark-detail (close)="close($event)"></my-bookmark-detail>
+</div>
+<div *ngIf="selectedBookmark">
+  <h2>
+    {{selectedBookmark.link | uppercase}} is my bookmark
+  </h2>
+  <button (click)="gotoDetail()">View Details</button>
+</div>
