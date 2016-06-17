@@ -17,8 +17,8 @@ export class HeroService {
                .then(heroes => heroes.filter(hero => hero.id === id)[0]);
   }
   save(hero: Hero): Promise<Hero>  {
-    if (hero.id) {
-      return this.put(hero);
+    if (hero.id) { 
+     return this.put(hero);
     }
     return this.post(hero);
   }

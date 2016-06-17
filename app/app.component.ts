@@ -27,7 +27,7 @@ import { CompilerComponent }     from './compiler.component';
 })
 @RouteConfig([
   { path: '/treirod',     name: 'TreIRod',     component: TreIRodComponent },
-  { path: '/compiler',     name: 'Compiler',     component: CompilerComponent }
+  { path: '/compiler',     name: 'Compiler',     component: CompilerComponent },
   { path: '/links/dashboard',  name: 'Dashboard',  component: DashboardComponent, useAsDefault: true },
   { path: '/links/detail/:id', name: 'HeroDetail', component: HeroDetailComponent },
   { path: '/links/heroes',     name: 'Heroes',     component: HeroesComponent }

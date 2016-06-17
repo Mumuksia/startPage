@@ -14,6 +14,8 @@ var dashboard_component_1 = require('./links/dashboard.component');
 var heroes_component_1 = require('./links/heroes.component');
 var hero_detail_component_1 = require('./links/hero-detail.component');
 var hero_service_1 = require('./links/hero.service');
+var treirod_component_1 = require('./treirod.component');
+var compiler_component_1 = require('./compiler.component');
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'Tour of Heroes';
@@ -21,7 +23,7 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n    <h1>{{title}}</h1>\n    <nav>\n      <a [routerLink]=\"['Dashboard']\">Dashboard</a>\n      <a [routerLink]=\"['Heroes']\">Heroes</a>\n    </nav>\n    <router-outlet></router-outlet>\n  ",
+            template: "\n    <h1>{{title}}</h1>\n    <nav>\n      <a [routerLink]=\"['Dashboard']\">Dashboard</a>\n      <a [routerLink]=\"['Heroes']\">Heroes</a>\n      <a [routerLink]=\"['TreIRod']\">Tre i Rod</a>\n      <a [routerLink]=\"['Compiler']\">Java Compiler</a>\n    </nav>\n    <router-outlet></router-outlet>\n  ",
             styleUrls: ['app/app.component.css'],
             directives: [router_deprecated_1.ROUTER_DIRECTIVES],
             providers: [
@@ -30,6 +32,8 @@ var AppComponent = (function () {
             ]
         }),
         router_deprecated_1.RouteConfig([
+            { path: '/treirod', name: 'TreIRod', component: treirod_component_1.TreIRodComponent },
+            { path: '/compiler', name: 'Compiler', component: compiler_component_1.CompilerComponent },
             { path: '/links/dashboard', name: 'Dashboard', component: dashboard_component_1.DashboardComponent, useAsDefault: true },
             { path: '/links/detail/:id', name: 'HeroDetail', component: hero_detail_component_1.HeroDetailComponent },
             { path: '/links/heroes', name: 'Heroes', component: heroes_component_1.HeroesComponent }

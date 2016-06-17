@@ -1,17 +1,16 @@
 export class InMemoryDataService {
   createDb() {
-    let heroes = [
-      {id: 11, name: 'Mr. Nice'},
-      {id: 12, name: 'Narco'},
-      {id: 13, name: 'Bombasto'},
-      {id: 14, name: 'Celeritas'},
-      {id: 15, name: 'Magneta'},
-      {id: 16, name: 'RubberMan'},
-      {id: 17, name: 'Dynama'},
-      {id: 18, name: 'Dr IQ'},
-      {id: 19, name: 'Magma'},
-      {id: 20, name: 'Tornado'}
-    ];
-    return {heroes};
+    let bookmarks = [
+      {id: 11, link: 'Mr. Nice', description: 'Some desc', category: 'some category'},
+      {id: 12, link: 'Narco', description: 'Some desc', category: 'some category'},
+      {id: 13, link: 'Bombasto', description: 'Some desc', category: 'some category'},
+      {id: 14, link: 'Celeritas', description: 'Some desc', category: 'some category'},
+      {id: 15, link: 'Magneta', description: 'Some desc', category: 'some category'},
+      {id: 16, link: 'RubberMan', description: 'Some desc', category: 'some category'},
+      {id: 17, link: 'Dynama', description: 'Some desc', category: 'some category'},
+      {id: 18, link: 'Dr IQ', description: 'Some desc', category: 'some category'},
+      {id: 19, link: 'Magma', description: 'Some desc', category: 'some category'}
+];
+    return {bookmarks};
   }
 }
