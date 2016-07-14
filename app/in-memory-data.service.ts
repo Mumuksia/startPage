@@ -11,6 +11,6 @@ export class InMemoryDataService {
       {id: 18, link: 'Dr IQ', description: 'Some desc', category: 'some category'},
       {id: 19, link: 'Magma', description: 'Some desc', category: 'some category'}
 ];
-    return {bookmarks};
+    return {bookmarks};    
   }
 }

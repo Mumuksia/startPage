@@ -15,8 +15,8 @@ export class DashboardComponent implements OnInit {
   private bookmarkService: BookmarkService) {
 }
   ngOnInit() {
-    this.bookmarkService.getBookmarks()
-      .then(bookmarks => this.bookmarks = bookmarks.slice(1,5));
+    this.bookmarkService.getCategories()
+    .then(bookmarks => this.bookmarks = bookmarks);
   }
   gotoDetail(bookmark: Bookmark) {
   let link = ['BookmarkDetail', { id: bookmark.id }];

@@ -9,21 +9,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var hero_service_1 = require('./hero.service');
+var bookmark_service_1 = require('./bookmark.service');
 var router_deprecated_1 = require('@angular/router-deprecated');
 var DashboardComponent = (function () {
-    function DashboardComponent(router, heroService) {
+    function DashboardComponent(router, bookmarkService) {
         this.router = router;
-        this.heroService = heroService;
-        this.heroes = [];
+        this.bookmarkService = bookmarkService;
+        this.bookmarks = [];
     }
     DashboardComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.heroService.getHeroes()
-            .then(function (heroes) { return _this.heroes = heroes.slice(1, 5); });
+        this.bookmarkService.getCategories()
+            .then(function (bookmarks) { return _this.bookmarks = bookmarks; });
     };
-    DashboardComponent.prototype.gotoDetail = function (hero) {
-        var link = ['HeroDetail', { id: hero.id }];
+    DashboardComponent.prototype.gotoDetail = function (bookmark) {
+        var link = ['BookmarkDetail', { id: bookmark.id }];
         this.router.navigate(link);
     };
     DashboardComponent = __decorate([
@@ -31,7 +31,7 @@ var DashboardComponent = (function () {
             selector: 'my-dashboard',
             templateUrl: 'app/links/dashboard.component.html',
         }), 
-        __metadata('design:paramtypes', [router_deprecated_1.Router, hero_service_1.HeroService])
+        __metadata('design:paramtypes', [router_deprecated_1.Router, bookmark_service_1.BookmarkService])
     ], DashboardComponent);
     return DashboardComponent;
 }());

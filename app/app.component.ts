@@ -4,8 +4,8 @@ import { DashboardComponent }  from './links/dashboard.component';
 import { BookmarksComponent }     from './links/bookmarks.component';
 import { BookmarkDetailComponent } from './links/bookmark-detail.component';
 import { BookmarkService }         from './links/bookmark.service';
-import { TreIRodComponent }     from './treirod.component';
-import { CompilerComponent }     from './compiler.component';
+import { TreIRodComponent }     from './treirod/treirod.component';
+import { CompilerComponent }     from './compiler/compiler.component';
 @Component({
   selector: 'my-app',
   template: `

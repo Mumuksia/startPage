@@ -2,6 +2,7 @@ import { Injectable }    from '@angular/core';
 import { Headers, Http } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 import { Bookmark } from './bookmark';
+import { Category } from './category';
 @Injectable()
 export class BookmarkService {
   private bookmarkUrl = 'app/bookmarks';  // URL to web api
@@ -11,6 +12,14 @@ export class BookmarkService {
                .toPromise()
                .then(response => response.json().data)
                .catch(this.handleError);
+  }
+  
+  getCategories(): Promise<Bookmark[]> {
+     return this.http.get(this.bookmarkUrl)
+               .toPromise()
+               .then(response => response.json().data)               
+               .catch(this.handleError);
+    
   }
   getBookmark(id: number) {
     return this.getBookmarks()
