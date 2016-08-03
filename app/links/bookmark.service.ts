@@ -5,12 +5,12 @@ import { Bookmark } from './bookmark';
 import { Category } from './category';
 @Injectable()
 export class BookmarkService {
-  private bookmarkUrl = 'app/bookmarks';  // URL to web api
+  private bookmarkUrl = 'http://wordsboot.herokuapp.com/bookmarks';  // URL to web api
   constructor(private http: Http) { }
   getBookmarks(): Promise<Bookmark[]> {
     return this.http.get(this.bookmarkUrl)
                .toPromise()
-               .then(response => response.json().data)
+               .then(response => response.json())
                .catch(this.handleError);
   }
   
@@ -21,7 +21,7 @@ export class BookmarkService {
                .catch(this.handleError);
     
   }
-  getBookmark(id: number) {
+  getBookmark(id: string) {
     return this.getBookmarks()
                .then(bookmarks => bookmarks.filter(bookmark => bookmark.id === id)[0]);
   }

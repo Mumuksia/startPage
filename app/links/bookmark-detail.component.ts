@@ -18,7 +18,7 @@ export class BookmarkDetailComponent implements OnInit {
   }
   ngOnInit() {
     if (this.routeParams.get('id') !== null) {
-      let id = +this.routeParams.get('id');
+      var id = this.routeParams.get('id');
       this.navigated = true;
       this.bookmarkService.getBookmark(id)
           .then(bookmark => this.bookmark = bookmark);

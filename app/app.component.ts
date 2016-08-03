@@ -11,8 +11,8 @@ import { CompilerComponent }     from './compiler/compiler.component';
   template: `
     <h1>{{title}}</h1>
     <nav>
-      <a [routerLink]="['Dashboard']">Dashboard</a>
       <a [routerLink]="['Bookmarks']">Bookmarks</a>
+      <a [routerLink]="['Dashboard']">Dashboard</a>      
       <a [routerLink]="['TreIRod']">Tre i Rod</a>
       <a [routerLink]="['Compiler']">Java Compiler</a>
     </nav>
