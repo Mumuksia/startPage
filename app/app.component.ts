@@ -9,6 +9,9 @@ import { CompilerComponent }     from './compiler/compiler.component';
 @Component({
   selector: 'my-app',
   template: `
+    <div class="headerContainer">    
+        <img class="headerImg" src="/assets/img/PianoHeader.png"/>
+    </div>
     <h1>{{title}}</h1>
     <nav>
       <a [routerLink]="['Bookmarks']">Bookmarks</a>

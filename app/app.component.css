@@ -26,3 +26,13 @@ nav a:hover {
 nav a.router-link-active {
   color: #039be5;
 }
+.headerContainer {
+  background-color: lightblue;
+  color: blue;
+  height: 160px;
+  text-align: center;
+}
+.headerImg{  
+  width: 50%;
+  height: 100%;
+}
